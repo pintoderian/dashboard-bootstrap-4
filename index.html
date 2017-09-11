@@ -1,25 +1,1019 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Derian Pinto">
+    <title>Dashboard | Codegea</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/codegea.css" rel="stylesheet">
     <!--Plugin-->
     <link rel="stylesheet" href="plugin/datatables/dataTables.bootstrap4.css">
-</head>
-<body>
+  </head>
+  <body>
+  <!--NavBar-->
+  <nav class="navbar navbar-toggleable-md bg-inverse bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menuTop" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <div class="collapse navbar-collapse" id="menuTop">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Edit Item</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Edit Item</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="javascript:(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link Edit</a>
+      </li>
+      <!--Notifications-->
+      <li class="nav-item dropdown noti">
+            <a class="nav-link dropdown-toggle mr-lg-2" href="#" id="messagesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-fw fa-envelope"></i>
+              <span class="d-lg-none">Messages
+                <span class="badge badge-pill badge-primary">12 New</span>
+              </span>
+              <span class="new-indicator text-primary d-none d-lg-block">
+                <i class="fa fa-fw fa-circle"></i>
+                <span class="number">12</span>
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+              <h6 class="dropdown-header">New Messages:</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <strong>David Miller</strong>
+                <span class="small float-right text-muted">11:21 AM</span>
+                <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <strong>Jane Smith</strong>
+                <span class="small float-right text-muted">11:21 AM</span>
+                <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <strong>John Doe</strong>
+                <span class="small float-right text-muted">11:21 AM</span>
+                <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item small" href="#">
+                View all messages
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown noti">
+            <a class="nav-link dropdown-toggle mr-lg-2" href="#" id="alertsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-fw fa-bell"></i>
+              <span class="d-lg-none">Alerts
+                <span class="badge badge-pill badge-warning">6 New</span>
+              </span>
+              <span class="new-indicator text-warning d-none d-lg-block">
+                <i class="fa fa-fw fa-circle"></i>
+                <span class="number">6</span>
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+              <h6 class="dropdown-header">New Alerts:</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <span class="text-success">
+                  <strong>
+                    <i class="fa fa-long-arrow-up"></i>
+                    Status Update</strong>
+                </span>
+                <span class="small float-right text-muted">11:21 AM</span>
+                <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <span class="text-danger">
+                  <strong>
+                    <i class="fa fa-long-arrow-down"></i>
+                    Status Update</strong>
+                </span>
+                <span class="small float-right text-muted">11:21 AM</span>
+                <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <span class="text-success">
+                  <strong>
+                    <i class="fa fa-long-arrow-up"></i>
+                    Status Update</strong>
+                </span>
+                <span class="small float-right text-muted">11:21 AM</span>
+                <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item small" href="#">
+                View all alerts
+              </a>
+            </div>
+          </li>
+      <!--End Notifications-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="javascript:(0);" id="Logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user"></i> User Admin
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Logout">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--Content-->
+<div class="row">
+  <div id="sidebar" class="col-12 col-sm-4 col-lg-2">
+      <!--Menu-->
+      <div class="user-admin">
+          <div class="row">
+              <div class="col-md-4">
+                <img src="https://api.adorable.io/avatars/128/abott6@adorable.io.png" alt="" class="avatar">
+              </div>
+              <div class="col-md-8">
+                 <div class="user-info">
+                    <span class="name">Derian Pinto</span>
+                    <span class="rol">Administrador</span> 
+                 </div>
+              </div>
+          </div>
+      </div>
+      <div class="collapse navbar-collapse">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
+            <a class="nav-link" href="index.html">
+              <i class="fa fa-fw fa-dashboard"></i>
+              <span class="nav-link-text">
+                Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-file"></i>
+              <span class="nav-link-text">
+                Example Pages</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+              <li>
+                <a href="login.html">Login Page</a>
+              </li>
+              <li>
+                <a href="register.html">Registration Page</a>
+              </li>
+              <li>
+                <a href="forgot-password.html">Forgot Password Page</a>
+              </li>
+              <li>
+                <a href="blank.html">Blank Page</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-sitemap"></i>
+              <span class="nav-link-text">
+                Menu Levels</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseMulti">
+              <li>
+                <a href="#">Second Level Item</a>
+              </li>
+              <li>
+                <a href="#">Second Level Item</a>
+              </li>
+              <li>
+                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Third Level</a>
+                <ul class="sidenav-third-level collapse" id="collapseMulti2">
+                  <li>
+                    <a href="#">Third Level Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Third Level Item</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-link"></i>
+              <span class="nav-link-text">
+                Link</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+        <!-- /.sidebar-collapse -->
+      <!--Fin Menu-->
+  </div>
+  <div id="wrapper" class="col-12 col-sm-8 col-lg-10">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">My Dashboard</li>
+        </ol>
+      <div class="codegea">
+        <!--Content-->
+        <div class="row">
+            <div class="col-md-8">
+                <!--Widgets-->
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card text-white bg-info">
+                            <div class="card-body">
+                                <div class="h1 text-muted text-right mb-4">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="h4 mb-0">4500</div>
+                                <small class="text-muted text-uppercase font-weight-bold">Twitter</small>
+                                <div class="progress progress-white progress-xs mt-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card text-white bg-danger">
+                            <div class="card-body">
+                                <div class="h1 text-muted text-right mb-4">
+                                    <i class="fa fa-facebook"></i>
+                                </div>
+                                <div class="h4 mb-0">5000</div>
+                                <small class="text-muted text-uppercase font-weight-bold">Facebook</small>
+                                <div class="progress progress-white progress-xs mt-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card text-white bg-success">
+                            <div class="card-body">
+                                <div class="h1 text-muted text-right mb-4">
+                                    <i class="fa fa-google-plus"></i>
+                                </div>
+                                <div class="h4 mb-0">3000</div>
+                                <small class="text-muted text-uppercase font-weight-bold">Visitors</small>
+                                <div class="progress progress-white progress-xs mt-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card text-white bg-warning">
+                            <div class="card-body">
+                                <div class="h1 text-muted text-right mb-4">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                <div class="h4 mb-0">400</div>
+                                <small class="text-muted text-uppercase font-weight-bold">Visitors</small>
+                                <div class="progress progress-white progress-xs mt-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Widgets-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Basic Form Elements
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt earum, tempore odio at asperiores dignissimos! Amet voluptatum perferendis nobis odio officia mollitia consequuntur eius, in iure culpa nostrum temporibus!
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis possimus quos alias dolorum soluta, magnam, excepturi, qui dicta quia tempora aliquam at facilis iure accusamus temporibus eius officiis quae obcaecati.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis possimus quos alias dolorum soluta, magnam, excepturi, qui dicta quia tempora aliquam at facilis iure accusamus temporibus eius officiis quae obcaecati.
+                        </p>
+                        <div class="form-group">
+                          <label class="control-label">Input</label>
+                          <input type="text" class="form-control" id="" placeholder="Example placeholder...">
+                        </div>
+                        <div class="form-group">
+                           <textarea name="" id="" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn-default">Demo</button>
+                          <button class="btn btn-primary">Demo</button>
+                          <button class="btn btn-warning">Demo</button>
+                          <button class="btn btn-info">Demo</button>
+                          <button class="btn btn-danger">Demo</button>
+                          <button class="btn btn-success">Demo</button>
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!--Datatables-->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    Example Data Tables
+                  </div>
+                  <div class="panel-body">
+                    <div class="table-responsive">
+              <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                  </tr>
+                  <tr>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                  </tr>
+                  <tr>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                  </tr>
+                  <tr>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                  </tr>
+                  <tr>
+                    <td>Brielle Williamson</td>
+                    <td>Integration Specialist</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2012/12/02</td>
+                    <td>$372,000</td>
+                  </tr>
+                  <tr>
+                    <td>Herrod Chandler</td>
+                    <td>Sales Assistant</td>
+                    <td>San Francisco</td>
+                    <td>59</td>
+                    <td>2012/08/06</td>
+                    <td>$137,500</td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Davidson</td>
+                    <td>Integration Specialist</td>
+                    <td>Tokyo</td>
+                    <td>55</td>
+                    <td>2010/10/14</td>
+                    <td>$327,900</td>
+                  </tr>
+                  <tr>
+                    <td>Colleen Hurst</td>
+                    <td>Javascript Developer</td>
+                    <td>San Francisco</td>
+                    <td>39</td>
+                    <td>2009/09/15</td>
+                    <td>$205,500</td>
+                  </tr>
+                  <tr>
+                    <td>Sonya Frost</td>
+                    <td>Software Engineer</td>
+                    <td>Edinburgh</td>
+                    <td>23</td>
+                    <td>2008/12/13</td>
+                    <td>$103,600</td>
+                  </tr>
+                  <tr>
+                    <td>Jena Gaines</td>
+                    <td>Office Manager</td>
+                    <td>London</td>
+                    <td>30</td>
+                    <td>2008/12/19</td>
+                    <td>$90,560</td>
+                  </tr>
+                  <tr>
+                    <td>Quinn Flynn</td>
+                    <td>Support Lead</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2013/03/03</td>
+                    <td>$342,000</td>
+                  </tr>
+                  <tr>
+                    <td>Charde Marshall</td>
+                    <td>Regional Director</td>
+                    <td>San Francisco</td>
+                    <td>36</td>
+                    <td>2008/10/16</td>
+                    <td>$470,600</td>
+                  </tr>
+                  <tr>
+                    <td>Haley Kennedy</td>
+                    <td>Senior Marketing Designer</td>
+                    <td>London</td>
+                    <td>43</td>
+                    <td>2012/12/18</td>
+                    <td>$313,500</td>
+                  </tr>
+                  <tr>
+                    <td>Tatyana Fitzpatrick</td>
+                    <td>Regional Director</td>
+                    <td>London</td>
+                    <td>19</td>
+                    <td>2010/03/17</td>
+                    <td>$385,750</td>
+                  </tr>
+                  <tr>
+                    <td>Michael Silva</td>
+                    <td>Marketing Designer</td>
+                    <td>London</td>
+                    <td>66</td>
+                    <td>2012/11/27</td>
+                    <td>$198,500</td>
+                  </tr>
+                  <tr>
+                    <td>Paul Byrd</td>
+                    <td>Chief Financial Officer (CFO)</td>
+                    <td>New York</td>
+                    <td>64</td>
+                    <td>2010/06/09</td>
+                    <td>$725,000</td>
+                  </tr>
+                  <tr>
+                    <td>Gloria Little</td>
+                    <td>Systems Administrator</td>
+                    <td>New York</td>
+                    <td>59</td>
+                    <td>2009/04/10</td>
+                    <td>$237,500</td>
+                  </tr>
+                  <tr>
+                    <td>Bradley Greer</td>
+                    <td>Software Engineer</td>
+                    <td>London</td>
+                    <td>41</td>
+                    <td>2012/10/13</td>
+                    <td>$132,000</td>
+                  </tr>
+                  <tr>
+                    <td>Dai Rios</td>
+                    <td>Personnel Lead</td>
+                    <td>Edinburgh</td>
+                    <td>35</td>
+                    <td>2012/09/26</td>
+                    <td>$217,500</td>
+                  </tr>
+                  <tr>
+                    <td>Jenette Caldwell</td>
+                    <td>Development Lead</td>
+                    <td>New York</td>
+                    <td>30</td>
+                    <td>2011/09/03</td>
+                    <td>$345,000</td>
+                  </tr>
+                  <tr>
+                    <td>Yuri Berry</td>
+                    <td>Chief Marketing Officer (CMO)</td>
+                    <td>New York</td>
+                    <td>40</td>
+                    <td>2009/06/25</td>
+                    <td>$675,000</td>
+                  </tr>
+                  <tr>
+                    <td>Caesar Vance</td>
+                    <td>Pre-Sales Support</td>
+                    <td>New York</td>
+                    <td>21</td>
+                    <td>2011/12/12</td>
+                    <td>$106,450</td>
+                  </tr>
+                  <tr>
+                    <td>Doris Wilder</td>
+                    <td>Sales Assistant</td>
+                    <td>Sidney</td>
+                    <td>23</td>
+                    <td>2010/09/20</td>
+                    <td>$85,600</td>
+                  </tr>
+                  <tr>
+                    <td>Angelica Ramos</td>
+                    <td>Chief Executive Officer (CEO)</td>
+                    <td>London</td>
+                    <td>47</td>
+                    <td>2009/10/09</td>
+                    <td>$1,200,000</td>
+                  </tr>
+                  <tr>
+                    <td>Gavin Joyce</td>
+                    <td>Developer</td>
+                    <td>Edinburgh</td>
+                    <td>42</td>
+                    <td>2010/12/22</td>
+                    <td>$92,575</td>
+                  </tr>
+                  <tr>
+                    <td>Jennifer Chang</td>
+                    <td>Regional Director</td>
+                    <td>Singapore</td>
+                    <td>28</td>
+                    <td>2010/11/14</td>
+                    <td>$357,650</td>
+                  </tr>
+                  <tr>
+                    <td>Brenden Wagner</td>
+                    <td>Software Engineer</td>
+                    <td>San Francisco</td>
+                    <td>28</td>
+                    <td>2011/06/07</td>
+                    <td>$206,850</td>
+                  </tr>
+                  <tr>
+                    <td>Fiona Green</td>
+                    <td>Chief Operating Officer (COO)</td>
+                    <td>San Francisco</td>
+                    <td>48</td>
+                    <td>2010/03/11</td>
+                    <td>$850,000</td>
+                  </tr>
+                  <tr>
+                    <td>Shou Itou</td>
+                    <td>Regional Marketing</td>
+                    <td>Tokyo</td>
+                    <td>20</td>
+                    <td>2011/08/14</td>
+                    <td>$163,000</td>
+                  </tr>
+                  <tr>
+                    <td>Michelle House</td>
+                    <td>Integration Specialist</td>
+                    <td>Sidney</td>
+                    <td>37</td>
+                    <td>2011/06/02</td>
+                    <td>$95,400</td>
+                  </tr>
+                  <tr>
+                    <td>Suki Burks</td>
+                    <td>Developer</td>
+                    <td>London</td>
+                    <td>53</td>
+                    <td>2009/10/22</td>
+                    <td>$114,500</td>
+                  </tr>
+                  <tr>
+                    <td>Prescott Bartlett</td>
+                    <td>Technical Author</td>
+                    <td>London</td>
+                    <td>27</td>
+                    <td>2011/05/07</td>
+                    <td>$145,000</td>
+                  </tr>
+                  <tr>
+                    <td>Gavin Cortez</td>
+                    <td>Team Leader</td>
+                    <td>San Francisco</td>
+                    <td>22</td>
+                    <td>2008/10/26</td>
+                    <td>$235,500</td>
+                  </tr>
+                  <tr>
+                    <td>Martena Mccray</td>
+                    <td>Post-Sales support</td>
+                    <td>Edinburgh</td>
+                    <td>46</td>
+                    <td>2011/03/09</td>
+                    <td>$324,050</td>
+                  </tr>
+                  <tr>
+                    <td>Unity Butler</td>
+                    <td>Marketing Designer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009/12/09</td>
+                    <td>$85,675</td>
+                  </tr>
+                  <tr>
+                    <td>Howard Hatfield</td>
+                    <td>Office Manager</td>
+                    <td>San Francisco</td>
+                    <td>51</td>
+                    <td>2008/12/16</td>
+                    <td>$164,500</td>
+                  </tr>
+                  <tr>
+                    <td>Hope Fuentes</td>
+                    <td>Secretary</td>
+                    <td>San Francisco</td>
+                    <td>41</td>
+                    <td>2010/02/12</td>
+                    <td>$109,850</td>
+                  </tr>
+                  <tr>
+                    <td>Vivian Harrell</td>
+                    <td>Financial Controller</td>
+                    <td>San Francisco</td>
+                    <td>62</td>
+                    <td>2009/02/14</td>
+                    <td>$452,500</td>
+                  </tr>
+                  <tr>
+                    <td>Timothy Mooney</td>
+                    <td>Office Manager</td>
+                    <td>London</td>
+                    <td>37</td>
+                    <td>2008/12/11</td>
+                    <td>$136,200</td>
+                  </tr>
+                  <tr>
+                    <td>Jackson Bradshaw</td>
+                    <td>Director</td>
+                    <td>New York</td>
+                    <td>65</td>
+                    <td>2008/09/26</td>
+                    <td>$645,750</td>
+                  </tr>
+                  <tr>
+                    <td>Olivia Liang</td>
+                    <td>Support Engineer</td>
+                    <td>Singapore</td>
+                    <td>64</td>
+                    <td>2011/02/03</td>
+                    <td>$234,500</td>
+                  </tr>
+                  <tr>
+                    <td>Bruno Nash</td>
+                    <td>Software Engineer</td>
+                    <td>London</td>
+                    <td>38</td>
+                    <td>2011/05/03</td>
+                    <td>$163,500</td>
+                  </tr>
+                  <tr>
+                    <td>Sakura Yamamoto</td>
+                    <td>Support Engineer</td>
+                    <td>Tokyo</td>
+                    <td>37</td>
+                    <td>2009/08/19</td>
+                    <td>$139,575</td>
+                  </tr>
+                  <tr>
+                    <td>Thor Walton</td>
+                    <td>Developer</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2013/08/11</td>
+                    <td>$98,540</td>
+                  </tr>
+                  <tr>
+                    <td>Finn Camacho</td>
+                    <td>Support Engineer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009/07/07</td>
+                    <td>$87,500</td>
+                  </tr>
+                  <tr>
+                    <td>Serge Baldwin</td>
+                    <td>Data Coordinator</td>
+                    <td>Singapore</td>
+                    <td>64</td>
+                    <td>2012/04/09</td>
+                    <td>$138,575</td>
+                  </tr>
+                  <tr>
+                    <td>Zenaida Frank</td>
+                    <td>Software Engineer</td>
+                    <td>New York</td>
+                    <td>63</td>
+                    <td>2010/01/04</td>
+                    <td>$125,250</td>
+                  </tr>
+                  <tr>
+                    <td>Zorita Serrano</td>
+                    <td>Software Engineer</td>
+                    <td>San Francisco</td>
+                    <td>56</td>
+                    <td>2012/06/01</td>
+                    <td>$115,000</td>
+                  </tr>
+                  <tr>
+                    <td>Jennifer Acosta</td>
+                    <td>Junior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>43</td>
+                    <td>2013/02/01</td>
+                    <td>$75,650</td>
+                  </tr>
+                  <tr>
+                    <td>Cara Stevens</td>
+                    <td>Sales Assistant</td>
+                    <td>New York</td>
+                    <td>46</td>
+                    <td>2011/12/06</td>
+                    <td>$145,600</td>
+                  </tr>
+                  <tr>
+                    <td>Hermione Butler</td>
+                    <td>Regional Director</td>
+                    <td>London</td>
+                    <td>47</td>
+                    <td>2011/03/21</td>
+                    <td>$356,250</td>
+                  </tr>
+                  <tr>
+                    <td>Lael Greer</td>
+                    <td>Systems Administrator</td>
+                    <td>London</td>
+                    <td>21</td>
+                    <td>2009/02/27</td>
+                    <td>$103,500</td>
+                  </tr>
+                  <tr>
+                    <td>Jonas Alexander</td>
+                    <td>Developer</td>
+                    <td>San Francisco</td>
+                    <td>30</td>
+                    <td>2010/07/14</td>
+                    <td>$86,500</td>
+                  </tr>
+                  <tr>
+                    <td>Shad Decker</td>
+                    <td>Regional Director</td>
+                    <td>Edinburgh</td>
+                    <td>51</td>
+                    <td>2008/11/13</td>
+                    <td>$183,000</td>
+                  </tr>
+                  <tr>
+                    <td>Michael Bruce</td>
+                    <td>Javascript Developer</td>
+                    <td>Singapore</td>
+                    <td>29</td>
+                    <td>2011/06/27</td>
+                    <td>$183,000</td>
+                  </tr>
+                  <tr>
+                    <td>Donna Snider</td>
+                    <td>Customer Support</td>
+                    <td>New York</td>
+                    <td>27</td>
+                    <td>2011/01/25</td>
+                    <td>$112,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+                  </div>
+                </div>
+                <!--End Datatables-->
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Traffic
+                    </div>
+                    <div class="panel-body">
+                    <div>Visits
+                        <span class="font-weight-bold float-right">(40% - 29.703 Users)</span>
+                    </div>
+                    <div class="progress progress-xs mt-2 mb-3">
+                        <div class="progress-bar bg-success" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
 
-    <!-- Core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="js/dashboard.js"></script>
-    <!--Plugin-->
-    <script src="plugin/datatables/jquery.dataTables.js"></script>
-    <script src="plugin/datatables/dataTables.bootstrap4.js"></script>
-</body>
+                    <div>Unique
+                        <span class="font-weight-bold float-right">(20% - 24.093 Unique Users)</span>
+                    </div>
+                    <div class="progress progress-xs mt-2 mb-3">
+                        <div class="progress-bar bg-info" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div>Pageviews
+                        <span class="font-weight-bold float-right">(60% - 78.706 Views)</span>
+                    </div>
+                    <div class="progress progress-xs mt-2 mb-3">
+                        <div class="progress-bar bg-warning" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div>New Users
+                        <span class="font-weight-bold float-right">(80% - 22.123 Users)</span>
+                    </div>
+                    <div class="progress progress-xs mt-2 mb-3">
+                        <div class="progress-bar bg-danger" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div>Bounce Rate
+                        <span class="font-weight-bold float-right">(40.15%)</span>
+                    </div>
+                    <div class="progress progress-xs mt-2 mb-3">
+                        <div class="progress-bar bg-success" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div>Visits
+                        <span class="font-weight-bold float-right">(40% - 29.703 Users)</span>
+                    </div>
+                    <div class="progress progress-xs mt-2 mb-3">
+                        <div class="progress-bar bg-success" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div>Unique
+                        <span class="font-weight-bold float-right">(20% - 24.093 Unique Users)</span>
+                    </div>
+                    <div class="progress progress-xs mt-2 mb-3">
+                        <div class="progress-bar bg-info" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!--Widget-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Last User
+                        <div class="pull-right">
+                          <span class="label label-danger">8 New Members</span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="users-list">
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott1@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">Alexander Pierce</a>
+                            <span class="users-list-date">Today</span>
+                          </li>
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott2@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">Norman</a>
+                            <span class="users-list-date">Yesterday</span>
+                          </li>
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott3@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">Jane</a>
+                            <span class="users-list-date">12 Jan</span>
+                          </li>
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott4@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">John</a>
+                            <span class="users-list-date">12 Jan</span>
+                          </li>
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott5@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">Alexander</a>
+                            <span class="users-list-date">13 Jan</span>
+                          </li>
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott6@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">Sarah</a>
+                            <span class="users-list-date">14 Jan</span>
+                          </li>
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott7@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">Nora</a>
+                            <span class="users-list-date">15 Jan</span>
+                          </li>
+                          <li>
+                            <img src="https://api.adorable.io/avatars/128/abott8@adorable.io.png" alt="User Image">
+                            <a class="users-list-name" href="#">Nadia</a>
+                            <span class="users-list-date">15 Jan</span>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer text-center">
+                      <a href="javascript:void(0)" class="uppercase">View All Users</a>
+                    </div>
+                </div>
+                <!-- /.widget --> 
+                <!--Widget-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        User Activity
+                    </div>
+                    <div class="panel-body">
+                        <div class="timeline-box timeline-box-left">
+                          <div class="tl-row">
+                              <div class="tl-item float-right">
+                                  <div class="tl-icon bg-danger"><i class="fa fa-toggle-on"></i></div>
+                                  <div class="popover right">
+                                      <div class="arrow"></div>
+                                      <div class="popover-content">
+                                          <div class="tl-label label label-info">Appointment</div>
+                                          <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.</p>
+                                          <div class="tl-time"><i class="fa fa-clock-o"></i> a few seconds ago</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="tl-row">
+                              <div class="tl-item float-right">
+                                  <div class="tl-icon bg-primary"><i class="fa fa-wifi"></i></div>
+                                  <div class="popover right">
+                                      <div class="arrow"></div>
+                                      <div class="popover-content">
+                                          <div class="tl-label label label-warning">Teleconference</div>
+                                          <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.</p>
+                                          <div class="tl-time"><i class="fa fa-clock-o"></i> a few seconds ago</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="tl-row">
+                              <div class="tl-item float-right">
+                                  <div class="tl-icon bg-success"><i class="fa fa-headphones"></i></div>
+                                  <div class="popover right">
+                                      <div class="arrow"></div>
+                                      <div class="popover-content">
+                                          <div class="tl-label label label-danger">Meeting</div>
+                                          <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.</p>
+                                          <div class="tl-time"><i class="fa fa-clock-o"></i> a few seconds ago</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- /.widget --> 
+            </div>
+        </div>
+        <!--End Content-->
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted">© 2017 <a href="https://codegea.com">CodeGea</a>, all rights reserved. Made with <i class="fa fa-heart"></i> for a better web.</span>
+        </div>
+      </footer>
+  </div>
+</div>
+  <!-- Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="js/dashboard.js"></script>
+  <!--Plugin-->
+  <script src="plugin/datatables/jquery.dataTables.js"></script>
+  <script src="plugin/datatables/dataTables.bootstrap4.js"></script>
+  </body>
 </html>
