@@ -7,4 +7,6 @@ Simple Dashboard
 
 ![Simple Dashboard](https://i.imgur.com/8D5SvGqr.png)
 
-Created by: [Codegea](https://codegea.com)
+Created by: [Derian Pinto](https://twitter.com/pintoderian)
+
+Website: [Codegea](https://codegea.com)
